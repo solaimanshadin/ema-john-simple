@@ -1,8 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { useAuth } from '../Login/useAuth';
 
 const Cart = (props) => {
+    const auth = useAuth()
     const totalPrice = props.cart.reduce((acc, crr) => {
-        return acc+crr.price
+        return acc+crr.price * (crr.quantity*2 || 1)
     },0)
     let shipping = 0;
     if(totalPrice >= 100){
@@ -21,6 +24,9 @@ const Cart = (props) => {
             <h6>Shipping Cost : ${shipping}</h6>
             <h6>Estimated Tax: ${tax}</h6>
             <h5>Total Price :${grandTotal} </h5>
+            {
+                props.children
+            }
         </div>
     );
 };

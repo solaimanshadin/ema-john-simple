@@ -1,0 +1,12 @@
+.review-item{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    padding: 20px;
+}
+
+.review-item button{
+    padding: 8px 30px;
+    background: goldenrod;
+    color: #fff;
+    border-radius: 5px;
+}

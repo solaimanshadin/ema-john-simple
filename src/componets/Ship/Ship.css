@@ -1,0 +1,9 @@
+.ship-form input{
+    display: block;
+    margin: 10px;
+    padding: 5px;
+
+}
+.ship-form span{
+    color: red;
+}
